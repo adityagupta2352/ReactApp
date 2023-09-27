@@ -12,9 +12,8 @@ class Header extends Component {
   render() {
     return (
       <>
-        <div>
+        <div id="sidebar">
           <button
-            className="App-Home"
             onClick={() =>
               this.setState({
                 selectedComponent: "Home"
@@ -25,7 +24,6 @@ class Header extends Component {
           </button>
 
           <button
-            className="App-Home"
             onClick={() =>
               this.setState({
                 selectedComponent: "About"
@@ -36,7 +34,6 @@ class Header extends Component {
           </button>
           
           <button
-            className="App-Home"
             onClick={() =>
               this.setState({
                 selectedComponent: "Contact"
@@ -47,7 +44,6 @@ class Header extends Component {
           </button>
           
           <button
-            className="App-Home"
             onClick={() =>
               this.setState({
                 selectedComponent: "Register"
@@ -57,7 +53,10 @@ class Header extends Component {
           Register
           </button>
         </div>
-        <Display selectState = {this.state.selectedComponent} ></Display>
+        <div id="displayContent">
+          <Display selectState = {this.state.selectedComponent} ></Display>
+        </div>
+        
       </>
     );
   }
